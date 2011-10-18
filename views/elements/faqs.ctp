@@ -12,7 +12,7 @@ $faqList = $this->requestAction('faqs/faqs/faq_list/'.$faqType);
 ?>
 
 <div class="faqs index">
-	<h2><?php __($faqType.' Faqs');?></h2>
+	<h2><?php echo __($faqType.' Faqs');?></h2>
 		<ol>
 		<?php foreach ($faqList as $faq): ?>
         	<li>

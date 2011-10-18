@@ -1,5 +1,5 @@
 <div class="faqs index">
-	<h2><?php __('Faqs');?></h2>
+	<h2><?php echo __('Faqs');?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id');?></th>
@@ -8,7 +8,7 @@
 			<th><?php echo $this->Paginator->sort('answer');?></th>
 			<th><?php echo $this->Paginator->sort('order');?></th>
 			<th><?php echo $this->Paginator->sort('is_public');?></th>
-			<th class="actions"><?php __('Actions');?></th>
+			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
 	<?php
 	$i = 0;
@@ -48,7 +48,7 @@
 	</div>
 </div>
 <div class="actions">
-	<h3><?php __('Actions'); ?></h3>
+	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('New Faq', true), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Users', true), array('controller' => 'users', 'action' => 'index')); ?> </li>
