@@ -1,7 +1,7 @@
 <div class="faqs form">
 <?php echo $this->Form->create('Faq');?>
 	<fieldset>
- 		<legend><?php echo __('Edit Faq'); ?></legend>
+ 		<legend><?php echo __('Admin Edit Faq'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
 		echo $this->Form->input('faq_type_id');
@@ -9,8 +9,6 @@
 		echo $this->Form->input('answer');
 		echo $this->Form->input('order');
 		echo $this->Form->input('is_public');
-		//echo $this->Form->input('creator_id');
-		//echo $this->Form->input('modifier_id');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
