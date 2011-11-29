@@ -19,7 +19,7 @@ class FaqsController extends AppController {
 		$faqList = $this->Faq->find('all', $options);
 		return $faqList;
 	}
-	function index() {
+	function index() {  
 		$this->Faq->recursive = 0;
 		$this->set('faqs', $this->paginate());
 	}
