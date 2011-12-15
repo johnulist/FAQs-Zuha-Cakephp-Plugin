@@ -1,7 +1,8 @@
 <?php
 class FaqsController extends AppController {
 
-	var $name = 'Faqs';
+	public $name = 'Faqs';
+	public $uses = 'Faqs.Faq';
 
 /**
  * Function used to get list of faq 
