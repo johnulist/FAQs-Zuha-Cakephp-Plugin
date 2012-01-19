@@ -10,7 +10,7 @@ class FaqsController extends AppController {
  */
 	function faq_list($type = null) {
 		if (!empty($type)) {
-			$typeId = enum('FAQ_TYPE', $type);
+			$typeId = Zuha::enum('FAQ_TYPE', $type);
 			if (!empty($typeId)) {
 				$options['conditions']['Faq.faq_type_id'] = $typeId;
 			}
@@ -43,7 +43,7 @@ class FaqsController extends AppController {
 				$this->Session->setFlash(__('The faq could not be saved. Please, try again.', true));
 			}
 		}
-		$faqTypes = enum('FAQ_TYPE');
+		$faqTypes = Zuha::enum('FAQ_TYPE');
 		$this->set(compact('faqTypes'));
 	}
 
