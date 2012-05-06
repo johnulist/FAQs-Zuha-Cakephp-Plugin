@@ -1,5 +1,7 @@
 <?php
-// this should be at the top of every element created with format __ELEMENT_PLUGIN_ELEMENTNAME_instanceNumber.
+echo 'Need to fix faq_type_id before faqs will work anymore.';
+
+/* this should be at the top of every element created with format __ELEMENT_PLUGIN_ELEMENTNAME_instanceNumber.
 // it allows a database driven way of configuring elements, and having multiple instances of that configuration.
 	if(!empty($instance) && defined('__ELEMENT_FAQS_FAQS_'.$instance)) {
 		extract(unserialize(constant('__ELEMENT_FAQS_FAQS_'.$instance)));
@@ -21,4 +23,4 @@ $faqList = $this->requestAction('faqs/faqs/faq_list/'.$faqType);
             </li>
 	   	<?php endforeach; ?>
 		</ol>
-</div>
+</div> */ ?>

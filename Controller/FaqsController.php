@@ -12,7 +12,7 @@ class FaqsController extends AppController {
 		if (!empty($type)) {
 			$typeId = Zuha::enum('FAQ_TYPE', $type);
 			if (!empty($typeId)) {
-				$options['conditions']['Faq.faq_type_id'] = $typeId;
+				$options['conditions']['Faq.faq_type'] = $typeId;
 			}
 		}
 		$options['order'] = array('Faq.order ASC');
@@ -20,6 +20,7 @@ class FaqsController extends AppController {
 		$faqList = $this->Faq->find('all', $options);
 		return $faqList;
 	}
+	
 	function index() {  
 		$this->Faq->recursive = 0;
 		$this->set('faqs', $this->paginate());
@@ -43,8 +44,6 @@ class FaqsController extends AppController {
 				$this->Session->setFlash(__('The faq could not be saved. Please, try again.', true));
 			}
 		}
-		$faqTypes = Zuha::enum('FAQ_TYPE');
-		$this->set(compact('faqTypes'));
 	}
 
 	function edit($id = null) {
@@ -63,8 +62,6 @@ class FaqsController extends AppController {
 		if (empty($this->request->data)) {
 			$this->request->data = $this->Faq->read(null, $id);
 		}
-		$faqTypes = $this->Faq->FaqType->find('list');
-		$this->set(compact('faqTypes'));
 	}
 
 	function delete($id = null) {
